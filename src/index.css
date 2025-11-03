@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Coderyn Design System - Modern, Professional, Ultra-Fast
+All colors MUST be HSL for consistency.
+*/
+
+@layer base {
+  :root {
+    /* Core backgrounds - Clean and minimal */
+    --background: 0 0% 99%;
+    --foreground: 215 25% 27%;
+
+    /* Card system - Subtle elevation */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    /* Popover system */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Primary brand - Sophisticated blue gradient system */
+    --primary: 217 91% 60%;
+    --primary-hover: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    /* Secondary system - Professional grays */
+    --secondary: 215 16% 97%;
+    --secondary-hover: 215 16% 94%;
+    --secondary-foreground: 215 25% 27%;
+
+    /* Muted system - Subtle backgrounds */
+    --muted: 215 16% 97%;
+    --muted-hover: 215 16% 94%;
+    --muted-foreground: 215 13% 65%;
+
+    /* Accent system - Modern highlights */
+    --accent: 217 91% 60%;
+    --accent-hover: 217 91% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* UI elements */
+    --border: 215 16% 92%;
+    --input: 215 16% 92%;
+    --ring: 217 91% 60%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 25% 27%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 91% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 215 16% 92%;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Layout */
+    --radius: 0.75rem;
+    --sidebar-width: 280px;
+    --sidebar-collapsed: 60px;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(229 84% 70%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(215 16% 98%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 27% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 27% / 0.1), 0 2px 4px -1px hsl(215 25% 27% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 27% / 0.1), 0 4px 6px -2px hsl(215 25% 27% / 0.05);
+    --shadow-glow: 0 0 0 1px hsl(217 91% 60% / 0.1), 0 8px 24px -4px hsl(217 91% 60% / 0.2);
+
+    /* Transitions */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 215 25% 11%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 25% 14%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 25% 14%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91% 70%;
+    --primary-hover: 217 91% 65%;
+    --primary-foreground: 215 25% 11%;
+    --primary-glow: 217 91% 80%;
+
+    --secondary: 215 25% 18%;
+    --secondary-hover: 215 25% 22%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 215 25% 18%;
+    --muted-hover: 215 25% 22%;
+    --muted-foreground: 215 13% 65%;
+
+    --accent: 217 91% 70%;
+    --accent-hover: 217 91% 65%;
+    --accent-foreground: 215 25% 11%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 71% 55%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 60%;
+    --warning-foreground: 0 0% 98%;
+
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 217 91% 70%;
+
+    /* Sidebar */
+    --sidebar-background: 215 25% 14%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 217 91% 70%;
+    --sidebar-primary-foreground: 215 25% 11%;
+    --sidebar-accent: 217 91% 70%;
+    --sidebar-accent-foreground: 215 25% 11%;
+    --sidebar-border: 215 25% 22%;
+    --sidebar-ring: 217 91% 70%;
+
+    /* Gradients for dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 70%), hsl(229 84% 80%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 25% 14%), hsl(215 25% 16%));
+    
+    /* Shadows for dark mode */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-glow: 0 0 0 1px hsl(217 91% 70% / 0.2), 0 8px 24px -4px hsl(217 91% 70% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
